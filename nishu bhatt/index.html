@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PGC-GYM Landing Page</title>
+    <!-- Ion Icons Js -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <!-- JS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <div class="container flex">
+            <!-- Mobile Button -->
+            <div class="mobile-btn">
+                <ion-icon name="grid"></ion-icon>
+            </div>
+            <div class="logo">
+                <img src="data:image/png;base64,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
+                " alt="" />
+            </div>
+
+            <ul class="nav">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#why-us">Features</a></li>
+                <li class="nav-item"><a href="#explore">Explore</a></li>
+                <li class="nav-item"><a href="#discount">Register</a></li>
+            </ul>
+
+            <a href="#" class="btn">Register</a>
+        </div>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex">
+            <div class="text">
+                <h1 class="mb">
+                    Complete Daily <br />
+                    <span>Workout</span> At Home
+                </h1>
+
+                <p class="mb">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                    sunt sed tempora neque molestiae corrupti nobis harum ullam eos nam!
+                </p>
+
+                <a href="#" class="btn mt">Get Started Now</a>
+            </div>
+
+            <div class="visual">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRttwdtgv-jXNuDgg4KvCqryXiukkqZ88LwbZIxipKc22PXvVUKBknDaDvVtujrC3y4IdU&usqp=CAU" alt="" />
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Why Us -->
+    <div class="section" id="why-us">
+        <div class="container flex">
+            <div class="text">
+                <h2 class="primary mb">Why Choose Us?</h2>
+                <h3 class="secondary mb">Consulatation with Expert.</h3>
+                <p class="tertiary">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quos
+                    maxime tempore?
+                </p>
+
+                <h3 class="secondary mb">Consulatation with Expert.</h3>
+                <p class="tertiary">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quos
+                    maxime tempore?
+                </p>
+            </div>
+            <div class="visual">
+                <img src="https://st2.depositphotos.com/1017986/6181/i/450/depositphotos_61816515-stock-photo-sporty-woman-exercising-with-barbell.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- End Why Us -->
+
+    <!-- Explore -->
+    <div class="section" id="explore">
+        <div class="container flex">
+            <div class="visual">
+                <img src="https://d20rwxqzk8p5vr.cloudfront.net/wp-content/uploads/2017/12/gym-lady.jpg" alt="" />
+            </div>
+            <div class="text">
+                <h2 class="primary mb">
+                    Explore Our Fitness <br />
+                    Studio
+                </h2>
+                <p class="tertiary mb">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    esse vitae ratione quos maiores eveniet temporibus illum! Eligendi
+                    amet officia unde sint totam ut optio. Molestiae, illo quia?
+                </p>
+
+                <a href="#" class="btn mt">Get Started Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Explore -->
+
+    <!-- Trainer -->
+    <div class="section" id="trainer">
+        <h2 class="primary mb">Our Professional Trainers</h2>
+        <div class="container flex">
+            <div class="trainer">
+                <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer1.jpg" alt="" />
+                <h3 class="secondary mb">Alan Smith</h3>
+                <p class="tertiary mb">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+                </p>
+
+                <a href="#" class="btn-2">
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </a>
+            </div>
+
+            <div class="trainer">
+                <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer2.jpg" alt="" />
+                <h3 class="secondary mb">Alan Smith</h3>
+                <p class="tertiary mb">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+                </p>
+
+                <a href="#" class="btn-2">
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </a>
+            </div>
+
+            <div class="trainer">
+                <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/trainer3.jpg" alt="" />
+                <h3 class="secondary mb">Alan Smith</h3>
+                <p class="tertiary mb">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.
+                </p>
+
+                <a href="#" class="btn-2">
+                    <ion-icon name="arrow-redo-circle-outline"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Trainer -->
+
+    <!-- Testimonial -->
+    <div class="section" id="testimonial">
+        <div class="container flex">
+            <div class="text">
+                <h2 class="primary">
+                    That's What Our Super <br />
+                    Client Says
+                </h2>
+
+                <br />
+                <br />
+                <br />
+
+                <div class="client">
+                    <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/client1.jpg" alt="" />
+                    <h2 class="secondary">Exelent Training</h2>
+                    <p class="tertiary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                        quas voluptatem ad, repudiandae voluptates odio deleniti
+                        reiciendis in veniam quidem expedita maxime error fugit. Pariatur
+                        quasi sunt aut id. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Neque, officiis.
+                    </p>
+                </div>
+            </div>
+            <div class="visual">
+                <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/testimonial.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonial -->
+
+    <!-- Discount -->
+    <div class="section" id="discount">
+        <div class="container flex">
+            <div class="visual">
+                <img src="https://raw.githubusercontent.com/programmercloud/pgc-gym/main/img/discount.png" alt="" />
+            </div>
+            <div class="text">
+                <h2 class="primary mb">
+                    Fitness Classes This Summer, Pay Now And Get 25% Discount
+                </h2>
+
+                <p class="tertiary mb">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maxime
+                    minus praesentium est et veniam voluptate alias excepturi minima
+                    placeat amet nostrum, eligendi, quod cum ducimus nesciunt ipsa eum,
+                    explicabo eaque obcaecati.
+                </p>
+
+                <a href="#" class="btn bt">Book Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Discount -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex">
+            <p class="tertiary">
+            2023,Made By NISHA BHATT
+            </p>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+    <script src="script.js"></script>
+</body>
+
+</html>
